@@ -5,7 +5,7 @@ import MainLogika from "./Pages/MainLogika";
 function App() {
   return (
     <Routes>
-      <Route path="/logika" element={<MainLogika />} />
+      <Route path="/" element={<MainLogika />} />
     </Routes>
   );
 }
