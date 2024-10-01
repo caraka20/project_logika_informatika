@@ -161,7 +161,6 @@ const MainLogika = () => {
     setTruthTable(table); // Set hasil tabel kebenaran
   };
 
-  // Fungsi untuk mengevaluasi ekspresi logika dan generate tabel kebenaran
   const handleEnter = () => {
     generateTruthTable(); // Generate tabel kebenaran
     setLastInput(""); // Reset input terakhir
