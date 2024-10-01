@@ -66,6 +66,7 @@ const MainLogika = () => {
         .replace(/P/g, P) // Variabel P
         .replace(/Q/g, Q) // Variabel Q
         .replace(/R/g, R); // Variabel R
+      console.log(jsExpr);
 
       return eval(jsExpr); // Evaluasi ekspresi dengan eval
     } catch (e) {
@@ -116,7 +117,7 @@ const MainLogika = () => {
 
   // Generate tabel kebenaran
   const generateTruthTable = () => {
-    const variables = getVariables(expression); // Ambil variabel dari ekspresi
+    const variables = getVariables(expression); // pariable dalam bentu arrai
     const subExpressions = getSubExpressions(expression); // Dapatkan sub-ekspresi
     let combinations = [];
 
@@ -167,10 +168,10 @@ const MainLogika = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="container bg-white p-6 h-full max-w-lg mx-auto rounded-lg shadow-lg">
         <div className="mb-6 text-xl font-semibold text-center text-gray-800">
-          {expression || "Klik tombol untuk mulai mengetik"}
+          {expression || "Klik tombol untuk expresi Logika"}
         </div>
 
         {truthTable.length > 0 && (
